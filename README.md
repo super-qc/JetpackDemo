@@ -4,3 +4,9 @@ Jetpack的使用
   3.使用ProcessLifecycleOwner监听应用程序生命周期    
   4.LiveData+ViewModel 简单应用   
   5.LiveData+ViewModel 实现Fragment之间通信   
+
+
+
+Room
+
+未操作：09-15 未看：11-15
