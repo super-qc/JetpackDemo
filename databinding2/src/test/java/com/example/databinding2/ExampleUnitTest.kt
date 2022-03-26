@@ -1,4 +1,4 @@
-package com.study.databinding
+package com.example.databinding2
 
 import org.junit.Test
 
