@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.NavArgs
 import androidx.navigation.Navigation
 
 
@@ -24,7 +25,15 @@ class HomeFragment : Fragment() {
         inflater.findViewById<Button>(R.id.button).setOnClickListener{
             // 跳转到DetailFragment
             val navController = Navigation.findNavController(it)
-            navController.navigate(R.id.action_homeFragment_to_detailFragment)
+
+            // 1. 普通传参 类型不安全
+            val bundle=Bundle()
+            bundle.putString("user_name","jack")
+             
+
+
+            navController.navigate(R.id.action_homeFragment_to_detailFragment,bundle)
+
         }
         return inflater
     }
