@@ -22,9 +22,17 @@ class DetailFragment : Fragment() {
     ): View? {
         val inflater = inflater.inflate(R.layout.fragment_detail, container, false)
 
-        Log.d("navigation","DetailFragment user_name:${arguments?.getString("user_name")}")
+        // 默认传参方式
+        Log.d("navigation", "DetailFragment user_name:${arguments?.getString("user_name")}")
 
-        inflater.findViewById<Button>(R.id.button2).setOnClickListener{
+        // SafeArgs
+        val homeFragmentArgs = arguments?.let { HomeFragmentArgs.fromBundle(it) }
+        Log.d(
+            "navigation",
+            "DetailFragment SafeArgs user_name:${homeFragmentArgs?.userName},age:${homeFragmentArgs?.age}"
+        )
+
+        inflater.findViewById<Button>(R.id.button2).setOnClickListener {
             // 跳转到DetailFragment
             val navController = Navigation.findNavController(it)
             navController.navigate(R.id.action_detailFragment_to_homeFragment)

@@ -22,23 +22,20 @@ class HomeFragment : Fragment() {
     ): View? {
         val inflater = inflater.inflate(R.layout.fragment_home, container, false)
 
-        inflater.findViewById<Button>(R.id.button).setOnClickListener{
+        inflater.findViewById<Button>(R.id.button).setOnClickListener {
             // 跳转到DetailFragment
             val navController = Navigation.findNavController(it)
 
             // 1. 普通传参 类型不安全
-            val bundle=Bundle()
-            bundle.putString("user_name","jack")
-             
+            val bundle = Bundle()
+            bundle.putString("user_name", "jack")
 
-
-            navController.navigate(R.id.action_homeFragment_to_detailFragment,bundle)
-
+            // SafeArgs
+            val homeFragmentArgs =HomeFragmentArgs("rose",10)
+            navController.navigate(R.id.action_homeFragment_to_detailFragment, homeFragmentArgs.toBundle())
         }
         return inflater
     }
-
-
 
 
 }
