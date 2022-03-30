@@ -6,6 +6,10 @@ Jetpack的使用
   5.LiveData+ViewModel 实现Fragment之间通信   
 
 
+navigation2：
+NavigationUI应用（通过Activity中的顶部菜单，跳转到其他Fragment;监听Fragment切换事件）
+navigation3：
+  DeepLink，主动发送一条通知，点击通知深度跳转到App中的某个Fragment
 
 Room
 
