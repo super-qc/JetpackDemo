@@ -8,7 +8,7 @@
 **项目介绍：**
 
 databinding3:
-  使用DataBinding+ViewModel+LiveData，实现篮球比赛实时计分功能
+  使用DataBinding+ViewModel+LiveData，双向绑定数据，实现篮球比赛实时计分功能
 
 navigation2：
   NavigationUI应用（通过Activity中的顶部菜单，跳转到其他Fragment;监听Fragment切换事件）
